@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Envision: TPU Accelerated Handtracking on the Edge">
+  <meta name="keywords" content="Envision, Handtracking, Edge, Gesture Recognition">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Envision: TPU Accelerated Handtracking on the Edge</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Envision: TPU Accelerated On-Device Handtracking</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/gshklovski/">Gregory Shklovski</a>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/yasper-de-jong-4b3082207/">Yasper De Jong</a>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/allisoniliu/">Ally Liu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/derek-dao-b9aab4298/">Derek Duy Dao</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://hyoukjunkwon.com/">Hyoukjun Kwon</a><sup>1</sup>,
+            </span>
+          </div>
+        
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>University of California, Irvine</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Senior Design Project Advisor</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Original Paper</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Darock-Dao/Envision-API/tree/Derek"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Envision Code Release</span>
+                  </a>
+              </span>
+              <!-- My Fork Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/yourusername/my-nerfies-fork"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>My Fork</span>
+                  </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video> -->
+      <img src="./static/images/dataflow.png" alt="Teaser" class="image" style="height: 100%; margin-bottom: 12px; margin-top: -20px;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Envision</span> enables low-cost development of nuanced gesture controls.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Whiteboard.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/hand_code_demo.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ComputerUse.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/keypoints_crop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present the first edge-deployed instance of open-source hand gesture recognition to leverage the Coral TPU Accelerator. 
+          </p>
+          <p> Mediapipe Hands is one of the state of the art Real-Time handtracking/gesture recognition models that are available as open source. However, the Coral TPU Accelerator can only run UINT8 models on a limited set of operations. 
+            By adapting the machine learning operations <i>transposed convolution</i> and <i>batch normalization</i>, we are able to quantize and deploy the model on the Coral TPU Accelerator. By offloading machine learning workloads
+            to an edge device with a USB accelerator, we reduce latency, while constraining user data to their edge device.
+          </p>
+          <p>
+            We further explore hardware designs with a Coral SMD module, that would permit our product to be deployed at a $80 price point with a form-factor smaller than a credit card. 
+          </p>
+          <p>
+            Our work is a step towards making gesture recognition more accessible and affordable for the masses. 
+            To support widespread adoption, we introduce an event-based SDK that makes incorporating gesture controls into spatial interfaces straightforward.
+            The rest of our project adopts this SDK to create a collection of demonstrative apps, all of which are solely operated through gestures received over bluetooth on our sdk. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://drive.google.com/file/d/1PkX0u-HsK3H8rhm8I-Ql8P2QJCcyqb1a/view?usp=sharing"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <!-- <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Envision SDK</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div> -->
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">Hand Code Demo</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+             This app demonstrates the capabilities of gestures as a high-level interface for high-throughput interaction. This is a code editor that uses gestures to curate AI suggested actions on their codebase. 
+            
+            <br/>
+            We deployed this app for you to try out gesture interaction for yourself.
+            </p>
+
+            <!-- Hand Code Link. -->
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/hand_code_demo.mp4"
+                      type="video/mp4">
+            </video>
+
+            <div class="has-text-centered" style="margin-top: 20px; margin-bottom: 20px;">
+              <a href="https://hand-code-web.vercel.app"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-external-link-alt"></i>
+                </span>
+                  <span>Try Hand Code</span>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Hardware Iterations</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Prototype 1</h3>
+        <div class="content has-text-justified">
+          <p>
+            ESP32 with OV5640 camera module.
+          </p>
+          <div class="content has-text-centered">
+            <img src="./static/images/hardware1.png"
+                 class="content has-text-centered"
+                 alt="Interpolate start reference image." style="width: 75%; text-align: center; margin: auto;"/>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Prototype 2</h3>
+        <div class="content has-text-justified">
+          <p>
+            Grove AI chip with Himax WiseEye2 AI processor.
+          </p>
+          <div class="content has-text-centered">
+            <img src="./static/images/hardware2.png"
+                 class="content has-text-centered"
+                 alt="Interpolate start reference image." style="width: 75%; text-align: center; margin: auto;"/>
+          </div>
+        </div>
+        <br/>
+
+
+        <h3 class="title is-4">Prototype 3</h3>
+        <div class="content has-text-justified">
+          <p>
+            Raspberry Pi 5 with Google Coral USB Accelerator.
+          </p>
+          <div class="content has-text-centered">
+            <img src="./static/images/hardware3.png"
+                 class="content has-text-centered"
+                 alt="Interpolate start reference image." style="width: 75%; text-align: center; margin: auto;"/>
+          </div>
+        </div>
+        <br/>
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Our work is built on top of the Google MediaPipe Gesture Recognition API and the Google Coral Edge TPU Accelerator.
+          </p>
+          <p>
+            <a href="https://mediapipe-studio.webapps.google.com/studio/demo/hand_landmarker">MediaPipe Gesture Recognition</a>
+          </p>
+          <p>
+            <a href="https://coral.ai/products/">Coral Edge TPU</a> 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        This is a fork of the <a href="https://nerfies.github.io">Nerfies</a> website.
+        <br>
+        Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+        <br>
+        Last updated: March 2025
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
